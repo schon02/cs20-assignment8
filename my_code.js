@@ -93,8 +93,6 @@ function validateForm() {
 	var formisvalid = false;
     let lastname = document.getElementById("lname").value;
 	let subtotal = document.getElementById("subtotal").value;
-	let street = document.getElementById("street").value;
-	let city = document.getElementById("city").value;
 
         if (lastname == "") {
             alert("Last name must be filled out");
@@ -114,6 +112,8 @@ function validateForm() {
 function submitted() {
 	var today = new Date();
 	let total = document.getElementById("total").value;
+	let street = document.getElementById("street").value;
+	let city = document.getElementById("city").value;
 
 	if (validateForm()) {
 		if (document.getElementById('pickup').checked) {
