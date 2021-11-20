@@ -120,22 +120,22 @@ function submitted() {
 			var temp_today = addMinutes(today, 15);
 			var pickup_time = temp_today.getHours() + ":" + temp_today.getMinutes();
 			// alert(pickup_time);
-
 		}
 		else if (document.getElementById('delivery').checked) {
 			var temp_today = addMinutes(today, 30);
 			var pickup_time = temp_today.getHours() + ":" + temp_today.getMinutes();
 			// alert(pickup_time);
 			if (street == "") {
-				formisvalid = false;
+				// formisvalid = false;
 				alert("Street must be filled out");
 			} 
 			else if (city == "") {
-				formisvalid = false;
+				// formisvalid = false;
 				alert("City must be filled out");
 			}
+			else {
+				alert("Your order has been submitted! Your order total: " + total + " Pickup time: " + pickup_time);
+			}
 		}
-		// alert(document.forms[0].cost[1].value);
-		alert("Your order has been submitted! Your order total: " + total + " Pickup time: " + pickup_time);
 	}
 }
