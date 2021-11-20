@@ -33,44 +33,6 @@ $(document).ready(function(){
 
 function validphonenum() {
     var phone = document.getElementById("phone").value;
-	// var valid_phone = /^\d{10}$/; 
-	// if (valid_phone.test(phonenum)) {
-	// 	return true;
-	// }
-	// else {
-	// 	return false; 
-	// }
-
-	// var filter = /^((\+[1-9]{1,4}[ \-]*)|(\([0-9]{2,3}\)[ \-]*)|([0-9]{2,4})[ \-]*)*?[0-9]{3,4}?[ \-]*[0-9]{3,4}?$/;
-
-	// if (filter.test(phonenum)) {
-	// 	if(phonenum.length==10){
-	// 		return true;
-	// 	} else {
-	// 		alert('Please put 10  digit mobile number');
-	// 		return false;
-	// 	}
-	//   }
-	//   else {
-	// 	alert('Not a valid number');
-	// 	return false;
-	//   }
-
-	// var phone_nums = phonenum.match(/\d/g).length===10;
-	// if(phone_nums.length==10){
-	// 	return true;
-	// } else {
-	// 	alert('Please put 10  digit mobile number');
-	// 	return false;
-	// }
-
-	// if (phone.length == 10) {
-	// 	return true;
-	// }
-	// else {
-	// 	return false; 
-	// }
-
 	var phoneRegex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
 
 	if (phoneRegex.test(phone)) {
@@ -120,6 +82,7 @@ function submitted() {
 			var temp_today = addMinutes(today, 15);
 			var pickup_time = temp_today.getHours() + ":" + temp_today.getMinutes();
 			// alert(pickup_time);
+			alert("Your order has been submitted! Your order total: " + total + " Pickup time: " + pickup_time);
 		}
 		else if (document.getElementById('delivery').checked) {
 			var temp_today = addMinutes(today, 30);
